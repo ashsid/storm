@@ -151,7 +151,7 @@ public class EvenScheduler implements IScheduler {
             String topologyId = topology.getId();
             Map<ExecutorDetails, WorkerSlot> newAssignment = scheduleTopology(topology, cluster);
             Map<WorkerSlot, List<ExecutorDetails>> nodePortToExecutors = Utils.reverseMap(newAssignment);
-
+            LOG.info("ccbd change one : mother fucker please work");
             for (Map.Entry<WorkerSlot, List<ExecutorDetails>> entry : nodePortToExecutors.entrySet()) {
                 WorkerSlot nodePort = entry.getKey();
                 List<ExecutorDetails> executors = entry.getValue();
