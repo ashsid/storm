@@ -108,7 +108,7 @@ public class EvenScheduler implements IScheduler {
 
         List<WorkerSlot> sortedList = sortSlots(availableSlots);
         if (sortedList == null) {
-            LOG.error("No available slots for topology: {}", topology.getName());
+            LOG.error("No available slots for topologies bro: {}", topology.getName());
             return new HashMap<ExecutorDetails, WorkerSlot>();
         }
 
@@ -141,7 +141,7 @@ public class EvenScheduler implements IScheduler {
         }
 
         if (reassignment.size() != 0) {
-            LOG.info("Available slots: {}", availableSlots.toString());
+            LOG.info("Available slots bro: {}", availableSlots.toString());
         }
         return reassignment;
     }
